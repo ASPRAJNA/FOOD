@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hotel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Asul' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Yeseva One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Volkhov' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Vast Shadow' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Sonsie One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <style>
+  /* Make the image fully responsive */
+  a{
+    font-family: 'Asul';font-size: 22px;font-weight: 900;
+}
+button{
+font-family: 'Charm';font-size: 22px;font-weight: bold;
+}
+h1{
+font-family: 'Yeseva On';font-size: 52px;font-weight: bold;
+color: crimson;text-shadow: 9px 4px 3px rgba(233, 139, 139, 0.8); 
+}
+  }
+  .carousel-inner img {
+    width: 100%;
+  
+  }
+  @media screen and (max-width: 880px) {
+  img {
+    height:400px;
+  }
+  .zoom { 
+overflow: hidden; 
+width: 90px;
+        height: 80px;
+} 
+  .zoom img{
+    height:80px;
+    height:90px;
+  }
+  input[type="checkbox"]{
+  width: 10px;
+        height: 10px;
+}
+} 
+h4{
+  font-family: 'Berkshire Swash';font-size: 22px;color:hotpink;
+}
+h5{
+  font-family: 'Courgette';font-size: 18px;color:indigo;font-weight: bolder;
+}
+input[type="checkbox"]{
+  width: 20px;
+        height: 20px;
+}
+.zoom { 
+overflow: hidden; 
+width: 190px;
+        height: 180px;
+        
+} 
+      
+        .zoom img { 
+          overflow: hidden; 
+            transition: 0.4s all ease-in-out; 
+            width: 190px;
+        height: 180px;
+        } 
+      
+        .zoom:hover img { 
+            transform: scale(1.2); 
+        } 
+        .zoom:hover img { 
+          overflow: hidden;   
+        } 
+ .fa {
+  padding: 5px;
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+   background: black;
+  color: white;
+}
+
+.fa:hover {
+   background: white;
+  color: black;
+  opacity: 1;
+}
+i:hover{
+cursor: pointer;
+opacity: 0.5;
+}
+  </style>
+</head>
+<body>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.drweil.com/wp-content/uploads/2019/02/Vegetarian-Diet-2-1018199018.jpg" width="100%" height="700">
+    </div>
+    <div class="carousel-item">
+        <img src="https://i.pinimg.com/originals/22/30/3a/22303ac0d473294c0934598464f71dab.png"  width="100%" height="700">
+      </div>
+    <div class="carousel-item">
+      <img src="http://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x694/public/image/2017/02/main/red-lentil-rice-cakes-with-simple-tomato-salsa-0810.jpg?itok=ckF8mEQB" width="100%" height="700">
+    </div>
+    <div class="carousel-item">
+        <img src="https://i.dietdoctor.com/wp-content/uploads/2018/07/DD_LC_Desserts_feature.jpg?auto=compress%2Cformat&w=1600&h=900&fit=crop"  width="100%" height="700">
+      </div>
+    <div class="carousel-item">
+      <img src="https://shilpaahuja.com/wp-content/uploads/2017/08/best-vegetarian-food-chennai-india-tamil-nadu-indian-tasty.jpg"  width="100%" height="700">
+    </div>
+    <div class="carousel-item">
+        <img src="https://i.ytimg.com/vi/-MTa9JY5WnA/maxresdefault.jpg"  width="100%" height="700">
+      </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="navbar-brand" href="#"><b class='fas fa-glass-cheers' style='font-size:48px;'>	&#127869;</b></a>
+      </li>
+    
+    <!-- Toggler/collapsibe Button -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#sna"  onclick="sn()" id="s">Snakes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#bev" onclick="be()" id="b">Beverages</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sof" onclick="so()" id="o">Soft drinks</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#col" onclick="co()" id="c">Cold items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tot" onclick="to()" id="t">Total</a>
+          </li>
+      </ul>
+
+  </nav>
+  <div>
+    <br><br>
+   <marquee style="width:95%;" behavior="scroll" direction="left" scrollamount="10"> <h1 id="mess">Hellow</h1></marquee>
+  </div>
+  <div id="sna" class="p-3 my-5 ">
+    <div class="row" style="margin-top:90px;">
+      <div class=" mt-3 col-sm-3 border p-3">
+        <h4 style="text-align: center;">Samosa</h4><br>
+        <div class="media "><div class="zoom ">
+          <img  style="overflow:scroll;" src="https://i0.wp.com/vegecravings.com/wp-content/uploads/2017/03/samosa-recipe-step-by-step-instructions.jpg?fit=1801%2C1717&quality=65&strip=all&ssl=1"  class="mr-3 mt-3 rounded" ></div>
+          <div class="media-body" style="box-sizing:border-box">
+            <h5>20 Rs</h5><br>
+            <input type="checkbox" class="form-check-input" id="s1" style="float:left;margin-left:2px;"><br><br><br>
+            <input type="number" id="sn1" value="1" class="form-control"><br><br>
+           </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class=" mt-3 col-sm-3 border p-3">
+        <h4 style="text-align: center;">Masala Dosa</h4><br>
+        <div class="media "><div class="zoom ">
+          <img style="overflow:scroll;" src="https://i.ytimg.com/vi/CCab5oh0ZOc/maxresdefault.jpg"  class="mr-3 mt-3 rounded" ></div>
+          <div class="media-body" style="box-sizing:border-box">
+            <h5>45 Rs</h5><br>
+            <input type="checkbox" class="form-check-input" id="s2" style="float:left;margin-left:2px;"><br><br><br>
+            <input type="number" id="sn2" value="1" class="form-control"><br><br>
+           </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class=" mt-3 col-sm-3 border p-3">
+      <h4 style="text-align: center;">Panipuri</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="data:image/jpeg;base64,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"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>20 Rs</h5><br>
+          <input type="checkbox" class="form-check-input" id="s3" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="sn3" value="1" class="form-control"><br><br>
+         </div>
+      </div>
+  </div>
+  </div>
+  <div class="row"><div class="col-sm-1"></div>
+    <div class=" mt-3 col-sm-3 border p-3">
+      <h4 style="text-align: center;">Gobi</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="https://recipe52.com/wp-content/uploads/2019/12/Gobi-Manchurian-Step_-7.jpg"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>40 Rs</h5><br>
+          <input type="checkbox" class="form-check-input" id="s4" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="sn4" value="1" class="form-control"><br><br>
+         </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class=" mt-3 col-sm-3 border p-3">
+      <h4 style="text-align: center;">Maggi</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQr20-m9HUvqcOCdp1Wm_ymU9Spaqeig0wzVw&usqp=CAU"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>20 Rs</h5><br>
+          <input type="checkbox" id="s5" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="sn5" value="1" class="form-control"><br><br>
+         </div>
+      </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Bonda</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="data:image/jpeg;base64,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"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>15 Rs</h5><br>
+        <input type="checkbox" class="form-check-input" id="s6" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="sn6" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+</div>
+</div>
+<div class="row">
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Masala Puri</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://1.bp.blogspot.com/-rKRqg4W1yso/XnDACHPUakI/AAAAAAAArmI/PVjO15xpmLESj51TB8t6f4yRzkzisWw_ACLcBGAsYHQ/s1600/1584447472478.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>25 Rs</h5><br>
+        <input type="checkbox" class="form-check-input" id="s7" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="sn7" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Puri Bhaji</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/86/a8/e0/puri-bhaji.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>30 Rs</h5><br>
+        <input type="checkbox" class="form-check-input"id="s8" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="sn8" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+</div>
+<div class="col-sm-1"></div>
+<div class=" mt-3 col-sm-3 border p-3">
+  <h4 style="text-align: center;">Burger</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://st2.depositphotos.com/1008239/9733/i/950/depositphotos_97330492-stock-photo-beautiful-big-hamburger-with-vegetables.jpg"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>35 Rs</h5><br>
+      <input type="checkbox" class="form-check-input" id="s9" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="sn9" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+</div>
+<div class="row"> <div class="col-sm-1"></div>
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Parota</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://farm9.staticflickr.com/8586/16023214373_90552b64f6_o.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>50 Rs</h5><br>
+        <input type="checkbox" class="form-check-input" id="s10" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="sn10" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Pizza</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://ratlamee.com/wp-content/uploads/2018/09/Veg-Pizza-1.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>120 Rs</h5><br>
+        <input type="checkbox"  id="s11" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="sn11" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+</div>
+<div class="col-sm-1"></div>
+<div class=" mt-3 col-sm-3 border p-3">
+  <h4 style="text-align: center;">French fries</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://kirbiecravings.com/wp-content/uploads/2019/09/easy-french-fries-1-700x881.jpg"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>30 Rs</h5><br>
+      <input type="checkbox" id="s12"class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="sn12" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+</div>
+<div class=" row container" style="float:center;margin:50px;">
+  <div class="col-sm-5"></div>
+  <button type="button" class="btn btn-success" style="margin-right:50px" onclick="n1()">NEXT</button>
+  <button type="button" class="btn btn-outline-dark"  onclick="to()">TOTAL</button>
+</div>
+</div>
+  <div id="bev" class="container" style="margin-top:90px;"><br><br><br><br>
+    <div class="row" >
+    <div class=" mt-3 col-sm-4 border p-3">
+      <h4 style="text-align: center;">Tea</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="https://static.toiimg.com/thumb/72294806.cms?width=680&height=512&imgsize=670264"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>10 Rs</h5><br>
+          <input type="checkbox"  id="b1" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="be1" value="1" class="form-control"><br><br>
+         </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class=" mt-3 col-sm-4 border p-3">
+      <h4 style="text-align: center;">Coffe</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="data:image/jpeg;base64,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"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>20 Rs</h5><br>
+          <input type="checkbox"  id="b2"  class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="be2"  value="1" class="form-control"><br><br>
+         </div>
+      </div>
+  </div></div>
+  <div class="row">
+  <div class=" mt-3 col-sm-4 border p-3">
+    <h4 style="text-align: center;">Green tea</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://www.healthshots.com/wp-content/uploads/2020/05/green-ta.jpg" class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>20 Rs</h5><br>
+        <input type="checkbox" id="b3" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="be3" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+</div>
+<div class="col-sm-2"></div>
+  <div class=" mt-3 col-sm-4 border p-3">
+    <h4 style="text-align: center;">Cold Coffe</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://4.imimg.com/data4/TW/OW/MY-30165244/cold-coffee-500x500.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>40 Rs</h5><br>
+        <input type="checkbox" id="b4" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="be4" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class=" mt-3 col-sm-4 border p-3">
+    <h4 style="text-align: center;">Cappuccion</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVLejqDSJJYA65R5mvVviNMuJ1mjVISVaAPQ&usqp=CAU"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>45 Rs</h5><br>
+        <input type="checkbox" id="b5" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="be5" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+</div>
+<div class="col-sm-2"></div>
+<div class=" mt-3 col-sm-4 border p-3">
+  <h4 style="text-align: center;">Black tea</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://vaya.in/recipes/wp-content/uploads/2018/02/Black-Tea.jpg"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>25 Rs</h5><br>
+      <input type="checkbox" id="b6" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="be6" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+</div>
+<div class=" row container" style="float:center;margin:50px;">
+  <div class="col-sm-3"></div>
+  <button type="button" class="btn btn-success" style="margin-right:50px" onclick="n2()">NEXT</button>
+  <button type="button" class="btn btn-outline-dark" onclick="to()">TOTAL</button>
+</div>
+</div>
+<div id="sof" class="container-fluid"><br>
+  <div class="row" style="margin-top:90px;"> 
+    <div class=" mt-3 col-sm-3 border p-3">
+      <h4 style="text-align: center;">Apple Juice</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="https://www.indianhealthyrecipes.com/wp-content/uploads/2017/03/homemade-apple-juice-recipe-500x447.jpg"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>40 Rs</h5><br>
+          <input type="checkbox" id="os1"  class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="so1" value="1" class="form-control"><br><br>
+         </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class=" mt-3 col-sm-3 border p-3">
+      <h4 style="text-align: center;">Banan Milkshake</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="https://static.toiimg.com/thumb/54697669.cms?imgsize=51027&width=800&height=800"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>35 Rs</h5><br>
+          <input type="checkbox"  id="os2"class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="so2"  value="1" class="form-control"><br><br>
+         </div>
+      </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Orange Juice</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://img1.thelist.com/img/gallery/when-you-drink-orange-juice-every-day-this-is-what-happens-to-your-body/intro-1587046287.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>40 Rs</h5><br>
+        <input type="checkbox" id="os3" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="so3" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+</div>
+</div>
+<div class="row"> 
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Mango Juice</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://bysgforsg.sg/wp-content/uploads/2020/05/mango-juice.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>45 Rs</h5><br>
+        <input type="checkbox"id="os4" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number"id="so4" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class=" mt-3 col-sm-3 border p-3">
+    <h4 style="text-align: center;">Chikku Juice</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;width:" src="https://www.netmeds.com/images/cms/wysiwyg/blog/2019/08/benefits_chickoo_big_898.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>30 Rs</h5><br>
+        <input type="checkbox" id="os5"  class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="so5" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+</div>
+<div class="col-sm-1"></div>
+<div class=" mt-3 col-sm-3 border p-3">
+  <h4 style="text-align: center;">Pineapple Juice</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://www.oliviascuisine.com/wp-content/uploads/2019/06/pineapple-mint-juice-brazilian-IG-720x720.jpg"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>45 Rs</h5><br>
+      <input type="checkbox" id="os6" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="so6" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+</div>
+<div class="row"> 
+<div class=" mt-3 col-sm-3 border p-3">
+  <h4 style="text-align: center;">Chocolate</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://i0.wp.com/www.ghezaeshiriin.com/wp-content/uploads/2020/04/img_4492.jpg"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>65 Rs</h5><br>
+      <input type="checkbox" id="os7" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="so7" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+<div class="col-sm-1"></div>
+<div class=" mt-3 col-sm-3 border p-3">
+  <h4 style="text-align: center;">Strawbery</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://gratefulgrazer.com/wp-content/uploads/2020/04/Vegan-Strawberry-Milkshake-19.jpg"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>70 Rs</h5><br>
+      <input type="checkbox" id="os8" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="so8" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+<div class="col-sm-1"></div>
+<div class=" mt-3 col-sm-3 border p-3">
+<h4 style="text-align: center;">Pista</h4><br>
+<div class="media "><div class="zoom ">
+  <img style="overflow:scroll;width:" src="https://1.bp.blogspot.com/-YGtKjqgqE_k/WJ1Fayx8hHI/AAAAAAAABo8/l4UP_CmTnfkvWp4bMnHJJarMTdBsVqjqACEw/s1600/DSCN5851.jpg"  class="mr-3 mt-3 rounded" ></div>
+  <div class="media-body" style="box-sizing:border-box">
+    <h5>75 Rs</h5><br>
+    <input type="checkbox" id="os9" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+    <input type="number" id="so9" value="1" class="form-control"><br><br>
+   </div>
+</div>
+</div>
+</div>
+<div class="row"> 
+<div class=" mt-3 col-sm-3 border p-3">
+  <h4 style="text-align: center;">Watermelon Juice</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRs6N_FST7-HQEcxalXMuRowpZqIORbO4uweA&usqp=CAU"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>50 Rs</h5><br>
+      <input type="checkbox" id="os10" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="so10" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+<div class="col-sm-1"></div>
+<div class=" mt-3 col-sm-3 border p-3">
+  <h4 style="text-align: center;">Lime Juice</h4><br>
+  <div class="media "><div class="zoom ">
+    <img style="overflow:scroll;" src="https://i1.wp.com/urbanplatter.in/wp-content/uploads/2019/05/9738-03.jpg?fit=2000%2C2000&ssl=1"  class="mr-3 mt-3 rounded" ></div>
+    <div class="media-body" style="box-sizing:border-box">
+      <h5>20 Rs</h5><br>
+      <input type="checkbox" id="os11" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+      <input type="number" id="so11" value="1" class="form-control"><br><br>
+     </div>
+  </div>
+</div>
+<div class="col-sm-1"></div>
+<div class=" mt-3 col-sm-3 border p-3">
+<h4 style="text-align: center;">Grape Juice</h4><br>
+<div class="media "><div class="zoom ">
+  <img style="overflow:scroll;" src="https://www.wedding-venues.co.uk/sites/default/files/21-purple-wedding-decorations-blackberry-jam.jpg"  class="mr-3 mt-3 rounded" ></div>
+  <div class="media-body" style="box-sizing:border-box">
+    <h5>45 Rs</h5><br>
+    <input type="checkbox" id="os12" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+    <input type="number" id="so12" value="1" class="form-control"><br><br>
+   </div>
+</div>
+</div>
+</div>
+<div class=" row container" style="float:center;margin:50px;">
+  <div class="col-sm-5"></div>
+  <button type="button" class="btn btn-success" style="margin-right:50px" onclick="n3()">NEXT</button>
+  <button type="button" class="btn btn-outline-dark" onclick="to()">TOTAL</button>
+</div>
+</div><br><br><br><br>
+<div id="col" class="container"><br><br>
+<div class="row" style="margin-top:90px;">
+  <div class=" mt-3 col-sm-4 border p-3">
+    <h4 style="text-align: center;">Pastry</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://www.mioamore.net/wp-content/uploads//2017/11/Black-Forest-Pastry.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>40 Rs</h5><br>
+        <input type="checkbox" id="c1" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="ce1" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+  </div><div class="col-sm-2"></div>
+  <div class=" mt-3 col-sm-4 border p-3">
+    <h4 style="text-align: center;">Donats</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190619-air-fryer-donuts-302-landscape-pf-1561758031.jpg"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>45 Rs</h5><br>
+        <input type="checkbox" id="c2" class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="ce2" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+  </div>
+</div>
+<div class="row" >
+  <div class="col-sm-3"></div>
+  <div class=" mt-3 col-sm-4 border p-3">
+    <h4 style="text-align: center;">Ice Cream</h4><br>
+    <div class="media "><div class="zoom ">
+      <img style="overflow:scroll;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR2n95PTM2OjtZoYlNT3V_kcfrIW8mJE7Q-lw&usqp=CAU"  class="mr-3 mt-3 rounded" ></div>
+      <div class="media-body" style="box-sizing:border-box">
+        <h5>50 Rs</h5><br>
+        <input type="checkbox" id="c3"class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+        <input type="number" id="ce3" value="1" class="form-control"><br><br>
+       </div>
+    </div>
+  </div>
+  </div>
+  <div class="row" >
+    <div class=" mt-3 col-sm-4 border p-3">
+      <h4 style="text-align: center;">Cake</h4><br>
+      <div class="media "><div class="zoom ">
+        <img style="overflow:scroll;" src="https://www.biscotts.com/wp-content/uploads/2016/05/cake.jpg"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>300 Rs</h5><br>
+          <input type="checkbox" id="c4"class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="ce4" value="1" class="form-control"><br><br>
+         </div>
+      </div>
+    </div><div class="col-sm-2"></div>
+    <div class=" mt-3 col-sm-4 border p-3">
+      <h4 style="text-align: center;">Fruits Salad</h4><br>
+      <div class="media "><div class="zoom ">
+        <img  style="overflow:scroll;" src="https://img.delicious.com.au/H3c2-WeG/w1200/del/2017/03/tropical-fruit-salad-with-paw-paw-granita-43161-2.jpg"  class="mr-3 mt-3 rounded" ></div>
+        <div class="media-body" style="box-sizing:border-box">
+          <h5>45 Rs</h5><br>
+          <input type="checkbox" id="c5"class="form-check-input" style="float:left;margin-left:2px;"><br><br><br>
+          <input type="number" id="ce5" value="1" class="form-control"><br><br>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row container" style="float:center;margin:50px;">
+    <div class="col-sm-3"></div>
+    <button type="button" class="btn btn-success" style="margin-right:50px" onclick="n4()">NEXT</button>
+    <button type="button" class="btn btn-outline-dark" onclick="to()">TOTAL</button>
+  </div>
+</div>
+<div id="tot" class="container">
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="comment">Your Orders</label>
+      <textarea  class="form-control" rows="8" id="order" name="text" readonly></textarea>
+    </div>
+    <button  type="button" class="btn btn-outline-danger" onclick="calci()">CALCULATE</button><br><br>
+    <textarea class="form-control" style="font-family: 'Vast Shadow';font-size: 32px;color:rgb(255, 0, 0);font-weight: bold;" rows="1" id="calculated"  readonly></textarea><br>
+    <h2 style="font-family: 'Sonsie One';color:chocolate;   text-align: center;">THANK YOU!!</h2>
+    <h6 style="font-family: 'Teko';color:darkcyan;text-align: center;font-size:25px;">Visit again</h6>
+  </form>
+</div>
+<div class="container-fluid bg-dark"><br><br><br>
+ <div class="container row">
+   <div class="col-lg-4">
+ <h3 style="font-size:15px;color:white;"><u>Follow us</u></h3>
+<i href="#" class="fa fa-facebook"></i>
+<i href="#" class="fa fa-twitter"></i>
+<i href="#" class="fa fa-youtube"></i>
+<i href="#" class="fa fa-instagram"></i>
+<i href="#" class="fa fa-yahoo"></i>
+</div>
+<div class="col-lg-6"></div>
+<div class="col-lg-2" style="float:right">
+  <h3 style="font-size:15px;color:white;"><u>Contact us</u></h3>
+  <i class="material-icons" style="font-size:23px;color:white;margin-left:5px;">mail</i>
+  <i class="material-icons" style="font-size:23px;color:white;margin-left:5px;">call</i>
+  <i class="material-icons" style="font-size:23px;color:white;margin-left:5px;">video_call</i>
+  <i class="material-icons" style="font-size:23px;color:white;margin-left:5px;">message</i>
+</div>
+</div>   
+  </div>
+<script>
+    var billf=0;
+    function calci(){
+        document.getElementById("calculated").innerHTML=billf; 
+    }
+  function to(){
+    var bill=0;
+    document.getElementById("calculated").innerHTML="";
+    document.getElementById("order").innerHTML="";
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="gray";
+    document.getElementById('o').style.color="gray";
+    document.getElementById('c').style.color="gray";
+    document.getElementById('t').style.color="white";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='block'; 
+    document.getElementById('mess').style.display='none';
+    if(document.getElementById("c1").checked==1){
+      bill=bill+document.getElementById("ce1").value*40;
+      document.getElementById("order").innerHTML+="Pastry"+"\t"+"\t"+"\t"+document.getElementById("ce1").value+"\t"+"40 Rs"+"\n";
+    }
+    if(document.getElementById("c2").checked==1){
+      bill=bill+document.getElementById("ce2").value*45;
+      document.getElementById("order").innerHTML+="Donats"+"\t"+"\t"+"\t"+document.getElementById("ce2").value+"\t"+"45 Rs"+"\n";
+    }
+    if(document.getElementById("c3").checked==1){
+      bill=bill+document.getElementById("ce3").value*50;
+      document.getElementById("order").innerHTML+="Ice Cream"+"\t"+"\t"+document.getElementById("ce3").value+"\t"+"50 Rs"+"\n";
+    }
+    if(document.getElementById("c4").checked==1){
+      bill=bill+document.getElementById("ce4").value*300;
+      document.getElementById("order").innerHTML+="Cake"+"\t"+"\t"+"\t"+document.getElementById("ce4").value+"\t"+"300 Rs"+"\n";
+    }
+    if(document.getElementById("c5").checked==1){
+      bill=bill+document.getElementById("ce5").value*45;
+      document.getElementById("order").innerHTML+="Fruit salad"+"\t"+"\t"+document.getElementById("ce5").value+"\t"+"45 Rs"+"\n";
+    }
+    if(document.getElementById("os1").checked==1){
+      bill=bill+document.getElementById("so1").value*40;
+      document.getElementById("order").innerHTML+="Apple Juice"+"\t"+"\t"+document.getElementById("so1").value+"\t"+"40 Rs"+"\n";
+    }
+    if(document.getElementById("os2").checked==1){
+      bill=bill+document.getElementById("so2").value*35;
+      document.getElementById("order").innerHTML+="Banana MilkShake"+"\t"+document.getElementById("so2").value+"\t"+"35 Rs"+"\n";
+    }
+    if(document.getElementById("os3").checked==1){
+      bill=bill+document.getElementById("so3").value*40;
+      document.getElementById("order").innerHTML+="Orange Juice"+"\t"+"\t"+document.getElementById("so3").value+"\t"+"40 Rs"+"\n";
+    }
+    if(document.getElementById("os4").checked==1){
+      bill=bill+document.getElementById("so4").value*45;
+      document.getElementById("order").innerHTML+="Mango Juice"+"\t"+"\t"+document.getElementById("so4").value+"\t"+"45 Rs"+"\n";
+    }
+    if(document.getElementById("os5").checked==1){
+      bill=bill+document.getElementById("so5").value*30;
+      document.getElementById("order").innerHTML+="Chikku Juice"+"\t"+"\t"+document.getElementById("so5").value+"\t"+"30 Rs"+"\n";
+    }
+    if(document.getElementById("os6").checked==1){
+      bill=bill+document.getElementById("so6").value*45;
+      document.getElementById("order").innerHTML+="Pineapple Juice"+"\t"+document.getElementById("so6").value+"\t"+"45 Rs"+"\n";
+    }
+    if(document.getElementById("os7").checked==1){
+      bill=bill+document.getElementById("so7").value*65;
+      document.getElementById("order").innerHTML+="Chocolate"+"\t"+"\t"+document.getElementById("so7").value+"\t"+"65 Rs"+"\n";
+    }
+    if(document.getElementById("os8").checked==1){
+      bill=bill+document.getElementById("so8").value*70;
+      document.getElementById("order").innerHTML+="Strawberry"+"\t"+"\t"+document.getElementById("so8").value+"\t"+"70 Rs"+"\n";
+    }
+    if(document.getElementById("os9").checked==1){
+      bill=bill+document.getElementById("so9").value*75;
+      document.getElementById("order").innerHTML+="Pista"+"\t"+"\t"+"\t"+document.getElementById("so9").value+"\t"+"75 Rs"+"\n";
+    }
+    if(document.getElementById("os10").checked==1){
+      bill=bill+document.getElementById("so10").value*50;
+      document.getElementById("order").innerHTML+="Watermellon juice"+"\t"+document.getElementById("so10").value+"\t"+"50 Rs"+"\n";
+    }
+    if(document.getElementById("os11").checked==1){
+      bill=bill+document.getElementById("so11").value*20;
+      document.getElementById("order").innerHTML+="Lemon Juice"+"\t"+"\t"+document.getElementById("so11").value+"\t"+"20 Rs"+"\n";
+    }
+    if(document.getElementById("os12").checked==1){
+      bill=bill+document.getElementById("so12").value*45;
+      document.getElementById("order").innerHTML+="Grape Juice"+"\t"+"\t"+document.getElementById("so12").value+"\t"+"45 Rs"+"\n";
+    }
+    if(document.getElementById("b1").checked==1){
+      bill=bill+document.getElementById("be1").value*10;
+      document.getElementById("order").innerHTML+="Tea"+"\t"+"\t"+"\t"+"\t"+document.getElementById("be1").value+"\t"+"10 Rs"+"\n";
+    }
+    if(document.getElementById("b2").checked==1){
+      bill=bill+document.getElementById("be2").value*20;
+      document.getElementById("order").innerHTML+="Coffee"+"\t"+"\t"+"\t"+document.getElementById("be2").value+"\t"+"20 Rs"+"\n";
+    }
+    if(document.getElementById("b3").checked==1){
+      bill=bill+document.getElementById("be3").value*20;
+      document.getElementById("order").innerHTML+="Green Tea"+"\t"+"\t"+document.getElementById("be3").value+"\t"+"20 Rs"+"\n";
+    }
+    if(document.getElementById("b4").checked==1){
+      bill=bill+document.getElementById("be4").value*40;
+      document.getElementById("order").innerHTML+="Cold Coffee"+"\t"+"\t"+document.getElementById("be4").value+"\t"+"40 Rs"+"\n";
+    }
+    if(document.getElementById("b5").checked==1){
+      bill=bill+document.getElementById("be5").value*45;
+      document.getElementById("order").innerHTML+="Cappucion"+"\t"+"\t"+document.getElementById("be5").value+"\t"+"45 Rs"+"\n";
+    }
+    if(document.getElementById("b6").checked==1){
+      bill=bill+document.getElementById("be6").value*25;
+      document.getElementById("order").innerHTML+="Black Tea"+"\t"+"\t"+"\t"+document.getElementById("be6").value+"\t"+"25 Rs"+"\n";
+    }
+    if(document.getElementById("s1").checked==1){
+      bill=bill+document.getElementById("sn1").value*20;
+      document.getElementById("order").innerHTML+="Samosa"+"\t"+"\t"+"\t"+document.getElementById("sn1").value+"\t"+"20 Rs"+"\n";
+    }
+    if(document.getElementById("s2").checked==1){
+      bill=bill+document.getElementById("sn2").value*45;
+      document.getElementById("order").innerHTML+="Masala Dosa"+"\t"+"\t"+document.getElementById("sn2").value+"\t"+"45 Rs"+"\n";
+    }
+    if(document.getElementById("s3").checked==1){
+      bill=bill+document.getElementById("sn3").value*20;
+      document.getElementById("order").innerHTML+="Panipuri"+"\t"+"\t"+"\t"+document.getElementById("sn3").value+"\t"+"20 Rs"+"\n";
+    }
+    if(document.getElementById("s4").checked==1){
+      bill=bill+document.getElementById("sn4").value*40;
+      document.getElementById("order").innerHTML+="Gobi"+"\t"+"\t"+"\t"+document.getElementById("sn4").value+"\t"+"40 Rs"+"\n";
+    }
+    if(document.getElementById("s5").checked==1){
+      bill=bill+document.getElementById("sn5").value*20;
+      document.getElementById("order").innerHTML+="Maggi"+"\t"+"\t"+"\t"+document.getElementById("sn5").value+"\t"+"20 Rs"+"\n";
+    }
+    if(document.getElementById("s6").checked==1){
+      bill=bill+document.getElementById("sn6").value*15;
+      document.getElementById("order").innerHTML+="Bonda"+"\t"+"\t"+"\t"+document.getElementById("sn6").value+"\t"+"15 Rs"+"\n";
+    }
+    if(document.getElementById("s7").checked==1){
+      bill=bill+document.getElementById("sn7").value*25;
+      document.getElementById("order").innerHTML+="Masala Puri"+"\t"+"\t"+document.getElementById("sn7").value+"\t"+"25 Rs"+"\n";
+    }
+    if(document.getElementById("s8").checked==1){
+      bill=bill+document.getElementById("sn8").value*30;
+      document.getElementById("order").innerHTML+="Puri Bhaji"+"\t"+"\t"+"\t"+document.getElementById("sn8").value+"\t"+"30 Rs"+"\n";
+    }
+    if(document.getElementById("s9").checked==1){
+      bill=bill+document.getElementById("sn9").value*35;
+      document.getElementById("order").innerHTML+="Burger"+"\t"+"\t"+"\t"+document.getElementById("sn9").value+"\t"+"35 Rs"+"\n";
+    }
+    if(document.getElementById("s10").checked==1){
+      bill=bill+document.getElementById("sn10").value*50;
+      document.getElementById("order").innerHTML+="Parota"+"\t"+"\t"+"\t"+document.getElementById("sn10").value+"\t"+"50 Rs"+"\n";
+    }
+    if(document.getElementById("s11").checked==1){
+      bill=bill+document.getElementById("sn11").value*120;
+      document.getElementById("order").innerHTML+="Pizza"+"\t"+"\t"+"\t"+document.getElementById("sn11").value+"\t"+"120 Rs"+"\n";
+    }
+    if(document.getElementById("s12").checked==1){
+      bill=bill+document.getElementById("sn12").value*30;
+      document.getElementById("order").innerHTML+="French Fries"+"\t"+"\t"+document.getElementById("sn12").value+"\t"+"30 Rs"+"\n";
+    }
+    billf=bill;
+  }
+  var d = new Date();
+if(d.getHours()<12){
+  document.getElementById('mess').innerHTML='Hellow !! Good Morning... Order Please';
+}
+else if(d.getHours()>=12&&d.getHours()<=17){
+  document.getElementById('mess').innerHTML='Hellow !! Good Afternoon... Order Please';
+}
+else if(d.getHours()>=18){
+  document.getElementById('mess').innerHTML='Hellow !! Good Evening... Order Please';
+}
+   document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='none';
+  function sn(){
+    document.getElementById('s').style.color="white";
+    document.getElementById('b').style.color="gray";
+    document.getElementById('o').style.color="gray";
+    document.getElementById('c').style.color="gray";
+    document.getElementById('t').style.color="gray";
+    document.getElementById('sna').style.display='block';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='none';
+    document.getElementById('mess').style.display='none';
+  }
+  function be(){
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="white";
+    document.getElementById('o').style.color="gray";
+    document.getElementById('c').style.color="gray";
+    document.getElementById('t').style.color="gray";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='block';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='none'; document.getElementById('mess').style.display='none';
+
+  }
+  function so(){
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="gray";
+    document.getElementById('o').style.color="white";
+    document.getElementById('c').style.color="gray";
+    document.getElementById('t').style.color="gray";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='block';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='none'; document.getElementById('mess').style.display='none';
+
+  }
+  function co(){
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="gray";
+    document.getElementById('o').style.color="gray";
+    document.getElementById('c').style.color="white";
+    document.getElementById('t').style.color="gray";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='block';
+    document.getElementById('tot').style.display='none'; document.getElementById('mess').style.display='none';
+
+    
+  }
+  
+  function n1(){
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="white";
+    document.getElementById('o').style.color="gray";
+    document.getElementById('c').style.color="gray";
+    document.getElementById('t').style.color="gray";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='block';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='none';
+  }
+  function n2(){
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="gray";
+    document.getElementById('o').style.color="white";
+    document.getElementById('c').style.color="gray";
+    document.getElementById('t').style.color="gray";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='block';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='none';
+  }
+  function n3(){
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="gray";
+    document.getElementById('o').style.color="gray";
+    document.getElementById('c').style.color="white";
+    document.getElementById('t').style.color="gray";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='block';
+    document.getElementById('tot').style.display='none';
+  }
+  function n4(){
+    document.getElementById('s').style.color="gray";
+    document.getElementById('b').style.color="gray";
+    document.getElementById('o').style.color="gray";
+    document.getElementById('c').style.color="gray";
+    document.getElementById('t').style.color="white";
+    document.getElementById('sna').style.display='none';
+    document.getElementById('bev').style.display='none';
+    document.getElementById('sof').style.display='none';
+    document.getElementById('col').style.display='none';
+    document.getElementById('tot').style.display='block';
+  }
+</script>
+
+</body>
+</html>
